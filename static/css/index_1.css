@@ -1,0 +1,9 @@
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: var(--table_nav_icon_bg);
+  border-color: var(--table_nav_icon_border);
+}
+.pagination li {
+  margin-left: 0.5rem;
+}

@@ -1,0 +1,75 @@
+<div class="container py-4">
+  <form>
+    <div class="row mb-3">
+      <!-- col-1 -->
+      <label for="inputbudgetcenter" class="col-sm-2 col-form-label">Budget Center</label>
+      <div class="col-sm-10">
+        <select id="inputbudgetcenter" class="form-select" aria-label="Default select example" required>
+          <option selected>Select budget center</option>
+          <option value="1">Sales</option>
+          <option value="2">Marketing</option>
+          <option value="3">Higher Education</option>
+        </select>
+      </div>
+
+      <!-- col-2 -->
+    </div>
+    <div class="row mb-3">
+      <label for="inputregion" class="col-sm-2 col-form-label">Region</label>
+      <div class="col-sm-10">
+        <select id="inputregion" class="form-select" aria-label="Default select example" required>
+          <option selected>Select region</option>
+          <option value="1">Central Anatolia Region</option>
+          <option value="2">Aegean Region</option>
+          <option value="3">Blacksea Region</option>
+          <option value="4">Mediterranean Region</option>
+          <option value="5">Eastern Anatolia Region</option>
+          <option value="6">Southeastren Region</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <label for="inputcreatedby" class="col-sm-2 col-form-label">Created By</label>
+      <div class="col-sm-10">
+        <select id="inputcreatedby" class="form-select" aria-label="Default select example" required>
+          <option selected>Select user</option>
+          <option value="1">David</option>
+          <option value="2">Henry</option>
+          <option value="3">Jane</option>
+        </select>
+      </div>
+    </div>
+    <hr />
+    <div class="row mb-3">
+      <label for="inputeventmode" class="col-sm-2 col-form-label">Event Mode</label>
+      <div class="col-sm-10">
+        <select id="inputeventmode" class="form-select" aria-label="Default select example" required>
+          <option selected>Select event mode</option>
+          <option value="1">Online</option>
+          <option value="2">Face to Face</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <label for="inputonlineurl" class="col-sm-2 col-form-label">Event URL(eğer online seçilmiş ise görünecek)</label>
+      <div class="col-sm-10">
+        <input id="inputonlineurl" class="form-select" aria-label="Default select example" required />
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <label for="arrival" class="col-sm-2 col-form-label">Trip Arrival Date</label>
+      <div class="col-sm-4">
+        <input type="date" id="arrival" class="form-select" aria-label="Default select example" required />
+      </div>
+
+      <label for="departure " class="col-sm-2 col-form-label">Trip Departure Date</label>
+      <div class="col-sm-4">
+        <input type="date" id="departure" class="form-select" aria-label="Default select example" required />
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Gönder</button>
+  </form>
+</div>

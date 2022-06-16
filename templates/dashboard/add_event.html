@@ -1,0 +1,224 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container-fluid py-4">
+  <form>
+    <div class="row border gx-5">
+      <div class="col-12 col-sm-6 col-xxl-3">
+        <div class="row mb-3">
+          <label for="institutiontpye" class="form-label">Institution Type</label>
+          <select class="form-select" id="institutiontpye" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">Global Key Account</option>
+            <option value="2">Local Key Account</option>
+            <option value="3">University</option>
+            <option value="4">Private K-12</option>
+            <option value="5">State K-12</option>
+            <option value="6">Other</option>
+          </select>
+        </div>
+        <div class="row mb-3">
+          <label for="institutionname" class="form-label">Institution Name</label>
+          <select class="form-select" id="institutionname" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">Institution Name</option>
+            <option value="2">Institution Name</option>
+            <option value="3">Institution Name</option>
+            <option value="4">Institution Name</option>
+            <option value="5">Institution Name</option>
+            <option value="6">Institution Name</option>
+          </select>
+        </div>
+        <div class="row mb-3">
+          <label for="institutioncode" class="form-label">Institution Code</label>
+          <select class="form-select" id="institutioncode" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">Institution Code</option>
+            <option value="2">Institution Code</option>
+            <option value="3">Institution Code</option>
+            <option value="4">Institution Code</option>
+            <option value="5">Institution Code</option>
+            <option value="6">Institution Code</option>
+          </select>
+        </div>
+        <div class="row mb-3">
+          <label for="institutioncode" class="form-label">Event Contact at Institution</label>
+          <input type="text" class="form-control" id="institutioncode" aria-label="Default select example" />
+          <div id="emailHelp" class="form-text">
+            Talep oluşturan kullanıcı kurumda bulunan yetkili kişinin ismini manuel olarak yazacaktır.
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="left-align" for="country">Country</label>
+          <select class="form-select" id="country"></select>
+          <label class="left-align" for="region">State</label>
+          <select class="form-select" id="state"></select>
+        </div>
+        <div class="row mb-3">
+          <label for="chaperonename" class="form-label">Chaperone Name</label>
+          <input type="text" class="form-control" id="chaperonename" aria-label="Default select example" />
+        </div>
+
+        <div class="row mb-3">
+          <label for="chaperonename" class="form-label">Chaperone Contact Number</label>
+          <input type="text" class="form-control" id="chaperonename" aria-label="Default select example" />
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-xxl-3">
+        <div class="row mb-3">
+          <label for="arrival" class="col col-form-label">1st Choice Presentation Date</label>
+          <input type="date" id="arrival" class="form-select" aria-label="Default select example" required />
+          <label for="arrival" class="col col-form-label">2st Choice Presentation Date</label>
+          <input type="date" id="arrival" class="form-select" aria-label="Default select example" />
+          <label for="arrival" class="col col-form-label">3st Choice Presentation Date</label>
+          <input type="date" id="arrival" class="form-select" aria-label="Default select example" />
+        </div>
+        <div class="row mb-3">
+          <label for="appt">Presentation Time </label>
+          <input class="form-select" type="time" id="appt" name="appt" required />
+        </div>
+        <div class="row mb-3">
+          <label for="appt">Presentation Duration (min) </label>
+          <input class="form-control" type="number" id="appt" name="appt" required />
+        </div>
+        <div class="row mb-3">
+          <label for="subject">Subject </label>
+          <textarea id="subject" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <div class="row mb-3">
+          <label for="product">Product </label>
+          <textarea id="product" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <div class="row mb-3">
+          <label for="">Trainer Confirmation Deadline</label>
+          <div class="input-group mb-3">
+            <input type="date" class="form-control" placeholder="Username" aria-label="Username" />
+            <input type="date" class="form-control" placeholder="Server" aria-label="Server" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="">Presentation Abstract Deadline </label>
+          <div class="input-group mb-3">
+            <input type="date" class="form-control" placeholder="Username" aria-label="Username" />
+            <input type="date" class="form-control" placeholder="Server" aria-label="Server" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-xxl-3">
+        <div class="row mb-3">
+          <label for="">Abstract Upload</label>
+          <input type="file" class="form-control" accept="application/pdf" />
+        </div>
+        <div class="row mb-3">
+          <label for="">Budget Estimate-Speaker Related (TL) </label>
+          <input class="form-control" type="number" id="appt" name="appt" disabled />
+        </div>
+        <div class="row mb-3">
+          <label for="">Budget Estimate-Travel/Accomodation (TL)</label>
+          <input class="form-control" type="number" id="appt" name="appt" required />
+        </div>
+        <div class="row mb-3">
+          <label for="">Budget Estimate-Other (TL) </label>
+          <input class="form-control" type="number" id="appt" name="appt" required />
+        </div>
+        <div class="row mb-3">
+          <label for="">Budget Actual-Speaker Related (TL)</label>
+          <input class="form-control" type="number" id="appt" name="appt" disabled />
+        </div>
+        <div class="row mb-3">
+          <label for="">Budget Actual-Travel/Accomodation (TL) </label>
+          <input class="form-control" type="number" id="appt" name="appt" disabled />
+        </div>
+        <div class="row mb-3">
+          <label for="">Budget Actual-Other (TL) </label>
+          <input class="form-control" type="number" id="appt" name="appt" disabled />
+        </div>
+        <div class="row mb-3">
+          <label for="">Budget Actual Total: </label>
+        </div>
+        <div class="row mb-3">
+          <label for="">Payment Status (TL) </label>
+          <select class="form-select" id="institutioncode" aria-label="Default select example" disabled>
+            <option selected>Open this select menu</option>
+            <option value="1">Pending</option>
+            <option value="2">Paid</option>
+            <option value="3">Sponsored</option>
+            <option value="4">Waiting for cross-charge confirmation</option>
+            <option value="5">Not Required</option>
+          </select>
+        </div>
+        <div class="row mb-3">
+          <label for="">Institution Value</label>
+          <input class="form-control" type="number" id="appt" name="appt" />
+        </div>
+        <div class="row mb-3">
+          <div class="input-group mb-3">
+            <label for="">Audience Size Estimate</label>
+            <input class="form-control" type="number" id="appt" name="appt" />
+            <label for="">Audience Size Actual</label>
+            <input class="form-control" type="number" id="appt" name="appt" disabled />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-xxl-3">
+        <div class="row mb-3">
+          <label for="">Audience Level of English </label>
+          <select class="form-select" id="institutioncode" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">Low</option>
+            <option value="2">Intermediate</option>
+            <option value="3">High</option>
+          </select>
+        </div>
+        <div class="row mb-3">
+          <label for="institutioncode" class="form-label">Audience Teaching Experience/Background</label>
+          <input type="text" class="form-control" id="institutioncode" aria-label="Default select example" />
+        </div>
+        <div class="row mb-3">
+          <label for="institutioncode" class="form-label">Audience Experience with Product </label>
+          <input type="text" class="form-control" id="institutioncode" aria-label="Default select example" />
+        </div>
+        <div class="row mb-3">
+          <label for="institutioncode" class="form-label">Audience Needs and Expectations </label>
+          <input type="text" class="form-control" id="institutioncode" aria-label="Default select example" />
+        </div>
+        <div class="row mb-3">
+          <label for="institutioncode" class="form-label">Other Audience Notes </label>
+          <input type="text" class="form-control" id="institutioncode" aria-label="Default select example" />
+        </div>
+        <div class="row mb-3">
+          <label for="">Audience Level of English </label>
+          <select class="form-select" id="institutioncode" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">Open</option>
+            <option value="2">Closed</option>
+            <option value="3">Postponed</option>
+            <option value="4">Cancelled</option>
+          </select>
+        </div>
+        <div class="row mb-3">
+          <label for="">Needs and Analysis Survey Result Upload</label>
+          <input type="file" class="form-control" accept="application/pdf" disabled />
+        </div>
+        <div class="row mb-3">
+          <label for="">Feedback Survey Result Upload</label>
+          <input type="file" class="form-control" accept="application/pdf" disabled />
+        </div>
+        <div class="row mb-3">
+          <label for="institutioncode" class="form-label">Notes</label>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<script language="javascript">
+  window.onload = function () {
+    populateCountries('country', 'state') // first parameter is id of country drop-down and second parameter is id of state drop-down
+    populateCountries('country2')
+    populateCountries('country2')
+  }
+</script>
+{% endblock content %}

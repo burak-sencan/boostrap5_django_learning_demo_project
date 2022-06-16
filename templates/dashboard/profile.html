@@ -1,0 +1,76 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container-fluid .d-print-block">
+  <div class="row ">
+    <div class="col-12 col-lg-4">
+      <!-- Left Content -->
+      <div class="mb-3">
+        <div class="row g-0 p-2">
+          <div class="col-md-4 d-flex flex-column gap-2">
+            <img
+              src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+              class="img-fluid rounded"
+              style="max-width: 200px; height: auto"
+            />
+            <p class="border rounded text-center text-white bg-info">starter</p>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Henry Doe</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, accusantium?</p>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ratione vero molestias quasi, non
+                veritatis placeat ea ex id. Quae eius vel praesentium placeat quisquam?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <!-- Profile İmage -->
+      </div>
+      <div class="col-8"></div>
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="row">
+        <!-- Right Content -->
+        <div class="col">
+          <h3>Etkinlik Geçmişi</h3>
+          <hr />
+
+          <table id="profileLast5EventTable" class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Tors Number</th>
+                <th scope="col">Creation Date</th>
+                <th scope="col">Presentation</th>
+                <th scope="col">Created by</th>
+                <th scope="col">Budget Center</th>
+                <th scope="col">Institution Name</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Tors Status</th>
+                <th scope="col">Payment Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for tors in data %}
+              <tr>
+                <th scope="row">{{tors.tors_num}}</th>
+                <td>{{tors.creation_date}}</td>
+                <td>{{tors.presentation}}</td>
+                <td>{{tors.created_by}}</td>
+                <td>{{tors.budget_center}}</td>
+                <td>{{tors.Institution_name}}</td>
+                <td>{{tors.subject}}</td>
+                <td>{{tors.tors_status}}</td>
+                <td>{{tors.payment_status}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container-fluid d-flex justify-content-around mt-2 mb-4">
+  <div class="h-25 p-4 bg-success shadow rounded text-white">
+    <h1>26</h1>
+    <p>Lorem ipsum dolor sit amet</p>
+  </div>
+  <div class="h-25 p-4 bg-primary shadow rounded text-white">
+    <h1>5</h1>
+    <p>Lorem ipsum dolor sit amet</p>
+  </div>
+  <div class="h-25 p-4 bg-warning shadow rounded text-white">
+    <h1>1</h1>
+    <p>Lorem ipsum dolor sit amet</p>
+  </div>
+  <div class="h-25 p-4 bg-danger shadow rounded text-white">
+    <h1>0</h1>
+    <p>Lorem ipsum dolor sit amet</p>
+  </div>
+</div>
+
+<table id="torsDataTable" class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Tors Number</th>
+      <th scope="col">Creation Date</th>
+      <th scope="col">Presentation</th>
+      <th scope="col">Created by</th>
+      <th scope="col">Budget Center</th>
+      <th scope="col">Institution Name</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Tors Status</th>
+      <th scope="col">Payment Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for tors in data %}
+    <tr>
+      <th scope="row">{{tors.tors_num}}</th>
+      <td>{{tors.creation_date}}</td>
+      <td>{{tors.presentation}}</td>
+      <td>{{tors.created_by}}</td>
+      <td>{{tors.budget_center}}</td>
+      <td>{{tors.Institution_name}}</td>
+      <td>{{tors.subject}}</td>
+      <td>{{tors.tors_status}}</td>
+      <td>{{tors.payment_status}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock content %}
