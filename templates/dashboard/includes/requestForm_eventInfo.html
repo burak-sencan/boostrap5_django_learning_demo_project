@@ -1,14 +1,39 @@
 <div class="container-fluid py-2">
   <div class="row">
-    <div class="col">
-      <p>event info bölümü</p>
-      <p>event info bölümü</p>
-      <p>event info bölümü</p>
-      <p>event info bölümü</p>
-      <p>event info bölümü</p>
-    </div>
-    <div class="col d-flex justify-content-end">
+    <div class="col-xxl-2 mb-4">
       <a class="btn btn-success align-self-baseline" href="{% url 'dashboard:add_event' %} ">Add event</a>
+    </div>
+    <div class="col-xxl-10">
+      <table id="torsReportTable" class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Tors Number</th>
+            <th scope="col">Tors Status</th>
+            <th scope="col">Creation Date</th>
+            <th scope="col">Presentation</th>
+            <th scope="col">Created by</th>
+            <th scope="col">Budget Center</th>
+            <th scope="col">Institution Name</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Payment Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for tors in data %}
+          <tr>
+            <th scope="row">{{tors.tors_num}}</th>
+            <td>{{tors.payment_status}}</td>
+            <td>{{tors.creation_date}}</td>
+            <td>{{tors.presentation}}</td>
+            <td>{{tors.created_by}}</td>
+            <td>{{tors.budget_center}}</td>
+            <td>{{tors.Institution_name}}</td>
+            <td>{{tors.subject}}</td>
+            <td>{{tors.tors_status}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

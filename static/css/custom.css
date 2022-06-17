@@ -12,7 +12,62 @@
   /* index_1 */
   --table_nav_icon_bg: #7d8597;
   --table_nav_icon_border: #979dac;
+
+  /*Tailwind Colors*/
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #9ca3af;
+  --gray-800: #1e293b;
+
+  /*Custom colors*/
+  /* CSS HEX */
+  --red-salsa: #f94144ff;
+  --orange-red: #f3722cff;
+  --yellow-orange-color-wheel: #f8961eff;
+  --maize-crayola: #f9c74fff;
+  --pistachio: #90be6dff;
+  --jungle-green: #43aa8bff;
+  --queen-blue: #577590ff;
 }
+.bg-slate-100 {
+  background-color: rgb(241 245 249);
+}
+.bg-gray-200 {
+  background-color: var(--gray-200);
+}
+.bg-gray-300 {
+  background-color: var(--gray-300);
+}
+.bg-gray-400 {
+  background-color: var(--gray-400);
+}
+.bg-gray-800 {
+  background-color: var(--gray-800);
+}
+
+.bg-red-salsa {
+  background-color: var(--red-salsa);
+}
+.bg-orange-red {
+  background-color: var(--orange-red);
+}
+.bg-yellow-orange-color-wheel {
+  background-color: var(--yellow-orange-color-wheel);
+}
+
+.bg-maize-crayola {
+  background-color: var(--maize-crayola);
+}
+.bg-pistachio {
+  background-color: var(--pistachio);
+}
+.bg-jungle-green {
+  background-color: var(--jungle-green);
+}
+.bg-queen-blue {
+  background-color: var(--queen-blue);
+}
+
 *,
 ::before,
 ::after {
@@ -176,3 +231,18 @@ a {
   white-space: nowrap !important;
 }
 /*add event form*/
+
+/*Callander.js*/
+@media screen and (max-width: 768px) {
+  .fc .fc-toolbar {
+    display: block;
+  }
+  .fc-toolbar-chunk {
+    padding: 5px;
+  }
+}
+
+/*Callander.js*/
+.banner{
+  width: 5%;
+}

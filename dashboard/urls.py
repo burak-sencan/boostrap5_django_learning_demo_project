@@ -12,4 +12,5 @@ urlpatterns = [
     path("index_6/", views.index_6, name="index_6"),
     path("add_event/", views.add_event, name="add_event"),
     path("profile/", views.profile, name="profile"),
+    path("pdCalender/", views.pdCalender, name="pdCalender"),
 ]
